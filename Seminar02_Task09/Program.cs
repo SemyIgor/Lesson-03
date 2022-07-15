@@ -45,7 +45,8 @@ int randomNumber = numberSintezator.Next(10, 100);
 
 char[] digits = randomNumber.ToString().ToCharArray();
 Console.WriteLine("Random namber = " + randomNumber);   // Printing random number (example: 57)
-//                           /* EXPLANATIONS of the method: NUMBER -> STRING -> CHARACTARS -> DIGITS */
+//               /* EXPLANATIONS of the method: NUMBER -> STRING -> CHARACTARS -> DIGITS */
+//               /* You can uncomment every string in bellow list to watch the result of it's work */
 // Console.WriteLine(randomNumber.ToString());  // Printing random string (example: "57")
 // Console.WriteLine(randomNumber.ToString().ToCharArray());  // Printing random char array (example:array of characters {5, 7})
 //  Console.WriteLine(digits[0]);      // Printing element [0] of the char array (example: 5)
@@ -60,7 +61,8 @@ int secondDigit = ((int)digits[1]-48);  // Converting character into integer num
 
 int maxDigit = firstDigit > secondDigit ? firstDigit : secondDigit;
 Console.WriteLine("Max digit = " + maxDigit);
-//  End Char -------------------------------------------
+// ---------------------------------------------------------------------------------------------------
+//                   End Variant III 
 
 //      String  =========================================
 // string randomString = randomNumber.ToString();
