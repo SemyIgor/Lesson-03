@@ -6,6 +6,8 @@ Console.Write("Input 3-digit number: ");
 string? inputString = Console.ReadLine();
 
 if(inputString != null){
+
+   
    if(inputString.Length == 3)
    {
       //               Variant I
@@ -16,12 +18,14 @@ if(inputString != null){
       // -----------------------------------------------------
       //               End Variant I
 
+
       //               Variant II
       // Using string as array
       // ========================================================
       // Console.WriteLine($"The second digit is {inputString[1]}");
       // --------------------------------------------------------
       //              End Variant II
+
 
       //                Variant III
       // Using char array and ASCII-code of the digit
@@ -35,5 +39,20 @@ if(inputString != null){
    {
       Console.WriteLine($"The number {inputString} is not 3-digit!");
    }
-   
+
+
+    //                Variant IV
+      // Using numbers
+      // ==============================================================
+      // int inputNumber = int.Parse(inputString);
+      // if(!((inputNumber / 100 < 1) || (inputNumber / 1000 > 1)))
+      // {
+      //    Console.WriteLine($"The second digit is {inputNumber/10%10}");
+      // }
+      // else
+      // {
+      //    Console.WriteLine($"The number {inputNumber} is not 3-digit number!");
+      // }
+      // --------------------------------------------------------------
+      //                End Variant IV
 }
