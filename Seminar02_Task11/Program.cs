@@ -1,4 +1,4 @@
-﻿// Generates random 3-digit number and converts it into 2-digit by removing it's 2nd digit
+﻿// Seminar02_Task11. Generates random 3-digit number and converts it into 2-digit by removing it's 2nd digit
 
 Console.Clear();
 System.Random numGenerator = new Random(); 
