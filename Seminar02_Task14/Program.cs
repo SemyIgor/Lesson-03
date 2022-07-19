@@ -4,7 +4,10 @@ Console.Clear();
 int firstNum = 7, secondNum = 23;
 
 Console.Write("Enter any whole number: ");
-int anyNumber = int.Parse(Console.ReadLine());
+string? anyString = Console.ReadLine();
+if(anyString != null)
+{
+int anyNumber = int.Parse(anyString);
 
 string VariantI(int first, int second) // Variant I (Ternary operator)
 {
@@ -34,4 +37,6 @@ Console.WriteLine(VariantI(firstNum, secondNum)); // Variant I
 
 Console.WriteLine("Variant II"); 
 Console.WriteLine(VariantII(firstNum, secondNum)); // Variant II
+}
+
 
