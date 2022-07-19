@@ -47,6 +47,22 @@ void VariantII(string inputStr)
    string result = (inputNumber < 100) ? noThirdDigit : isThirdDigit;
    Console.WriteLine(result);
 }
+// Variant III Using logarithm
+void VariantIII(string inputStr)
+{
+   Console.WriteLine("VariantIII Using logarithm");
+   int inputNumber = int.Parse(inputStr);
+   int digitsNumber = (int)(Math.Log10(inputNumber)) + 1; // The number of digits in the given number
+   if(digitsNumber <= 2)
+   {
+      Console.WriteLine($"В числе {inputNumber} нет третьей цифры");
+   }
+   else
+   {
+      int threeDigits = (int)(Math.Pow(10, (digitsNumber - 3))); // Keeping three first digits in the given number
+      Console.WriteLine($"В числе {inputNumber} третья цифра = {inputNumber / threeDigits % 10}");
+   }
+}
 
 Console.Write("Введите целое число: ");
 string? inputString = Console.ReadLine();
@@ -55,6 +71,8 @@ if(inputString != null)
    VariantI(inputString);
 
    VariantII(inputString);
+   
+   VariantIII(inputString);
 }
 
 
