@@ -5,54 +5,59 @@ Console.Clear();
 Console.Write("Input 3-digit number: ");
 string? inputString = Console.ReadLine();
 
-if(inputString != null){
+// Variant I Using char array
+void VariantI(string inputStr)
+{
+   char[] digits = inputStr.ToCharArray();
+   Console.WriteLine("Variant I Using char array");
+   Console.WriteLine($"The second digit is {digits[1]}");
+}
 
-   
-   if(inputString.Length == 3)
+// Variant II Using string as array
+void VariantII(string inputStr)
+{
+   Console.WriteLine("Variant II Using string as array");
+   Console.WriteLine($"The second digit is {inputStr[1]}");
+}
+
+// Variant III Using char array and ASCII-code of the digit
+void VariantIII(string inputStr)
+{
+   char[] digits = inputString.ToCharArray();
+   Console.WriteLine("Variant III Using char array and ASCII-code of the digit");
+   Console.WriteLine($"The second digit is {((int)digits[1] - 48)}");
+}
+
+// Variant IV Using numbers
+void VariantIV(string inputStr)
+{
+   Console.WriteLine("Variant IV Using numbers");
+   int inputNumber = int.Parse(inputStr);
+   if(!((inputNumber / 100 < 1) || (inputNumber / 1000 > 1)))
    {
-      //               Variant I
-      // Using char array
-      // =====================================================
-      char[] digits = inputString.ToCharArray();
-      Console.WriteLine($"The second digit is {digits[1]}");
-      // -----------------------------------------------------
-      //               End Variant I
-
-
-      //               Variant II
-      // Using string as array
-      // ========================================================
-      // Console.WriteLine($"The second digit is {inputString[1]}");
-      // --------------------------------------------------------
-      //              End Variant II
-
-
-      //                Variant III
-      // Using char array and ASCII-code of the digit
-      // ==============================================================
-      // char[] digits = inputString.ToCharArray();
-      // Console.WriteLine($"The second digit is {((int)digits[1] - 48)}");
-      // --------------------------------------------------------------
-      //                End Variant III
+      Console.WriteLine($"The second digit is {inputNumber/10%10}");
    }
    else
    {
+      Console.WriteLine($"The number {inputNumber} is not 3-digit number!");
+   }
+
+}
+
+if(inputString != null){
+   if(inputString.Length == 3)
+   {
+      VariantI(inputString);
+
+      VariantII(inputString);
+
+      VariantIII(inputString);
+   }
+   else
+   {
+      Console.WriteLine("VariantI, VariantII and VariantIII");
       Console.WriteLine($"The number {inputString} is not 3-digit!");
    }
 
-
-    //                Variant IV
-      // Using numbers
-      // ==============================================================
-      // int inputNumber = int.Parse(inputString);
-      // if(!((inputNumber / 100 < 1) || (inputNumber / 1000 > 1)))
-      // {
-      //    Console.WriteLine($"The second digit is {inputNumber/10%10}");
-      // }
-      // else
-      // {
-      //    Console.WriteLine($"The number {inputNumber} is not 3-digit number!");
-      // }
-      // --------------------------------------------------------------
-      //                End Variant IV
+   VariantIV(inputString);
 }
