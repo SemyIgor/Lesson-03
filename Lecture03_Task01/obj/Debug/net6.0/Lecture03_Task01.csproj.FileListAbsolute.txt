@@ -1,0 +1,15 @@
+J:\MY\_WEB\_GEEKBRAINS\002_ПЕРВАЯ ЧЕТВЕРТЬ\004_ЗНАКОМСТВО С ЯЗЫКОМ ПРОГРАММИРОВАНИЯ C#\Lesson-03\Lecture03_Task01\bin\Debug\net6.0\Lecture03_Task01.exe
+J:\MY\_WEB\_GEEKBRAINS\002_ПЕРВАЯ ЧЕТВЕРТЬ\004_ЗНАКОМСТВО С ЯЗЫКОМ ПРОГРАММИРОВАНИЯ C#\Lesson-03\Lecture03_Task01\bin\Debug\net6.0\Lecture03_Task01.deps.json
+J:\MY\_WEB\_GEEKBRAINS\002_ПЕРВАЯ ЧЕТВЕРТЬ\004_ЗНАКОМСТВО С ЯЗЫКОМ ПРОГРАММИРОВАНИЯ C#\Lesson-03\Lecture03_Task01\bin\Debug\net6.0\Lecture03_Task01.runtimeconfig.json
+J:\MY\_WEB\_GEEKBRAINS\002_ПЕРВАЯ ЧЕТВЕРТЬ\004_ЗНАКОМСТВО С ЯЗЫКОМ ПРОГРАММИРОВАНИЯ C#\Lesson-03\Lecture03_Task01\bin\Debug\net6.0\Lecture03_Task01.dll
+J:\MY\_WEB\_GEEKBRAINS\002_ПЕРВАЯ ЧЕТВЕРТЬ\004_ЗНАКОМСТВО С ЯЗЫКОМ ПРОГРАММИРОВАНИЯ C#\Lesson-03\Lecture03_Task01\bin\Debug\net6.0\Lecture03_Task01.pdb
+J:\MY\_WEB\_GEEKBRAINS\002_ПЕРВАЯ ЧЕТВЕРТЬ\004_ЗНАКОМСТВО С ЯЗЫКОМ ПРОГРАММИРОВАНИЯ C#\Lesson-03\Lecture03_Task01\obj\Debug\net6.0\Lecture03_Task01.csproj.AssemblyReference.cache
+J:\MY\_WEB\_GEEKBRAINS\002_ПЕРВАЯ ЧЕТВЕРТЬ\004_ЗНАКОМСТВО С ЯЗЫКОМ ПРОГРАММИРОВАНИЯ C#\Lesson-03\Lecture03_Task01\obj\Debug\net6.0\Lecture03_Task01.GeneratedMSBuildEditorConfig.editorconfig
+J:\MY\_WEB\_GEEKBRAINS\002_ПЕРВАЯ ЧЕТВЕРТЬ\004_ЗНАКОМСТВО С ЯЗЫКОМ ПРОГРАММИРОВАНИЯ C#\Lesson-03\Lecture03_Task01\obj\Debug\net6.0\Lecture03_Task01.AssemblyInfoInputs.cache
+J:\MY\_WEB\_GEEKBRAINS\002_ПЕРВАЯ ЧЕТВЕРТЬ\004_ЗНАКОМСТВО С ЯЗЫКОМ ПРОГРАММИРОВАНИЯ C#\Lesson-03\Lecture03_Task01\obj\Debug\net6.0\Lecture03_Task01.AssemblyInfo.cs
+J:\MY\_WEB\_GEEKBRAINS\002_ПЕРВАЯ ЧЕТВЕРТЬ\004_ЗНАКОМСТВО С ЯЗЫКОМ ПРОГРАММИРОВАНИЯ C#\Lesson-03\Lecture03_Task01\obj\Debug\net6.0\Lecture03_Task01.csproj.CoreCompileInputs.cache
+J:\MY\_WEB\_GEEKBRAINS\002_ПЕРВАЯ ЧЕТВЕРТЬ\004_ЗНАКОМСТВО С ЯЗЫКОМ ПРОГРАММИРОВАНИЯ C#\Lesson-03\Lecture03_Task01\obj\Debug\net6.0\Lecture03_Task01.dll
+J:\MY\_WEB\_GEEKBRAINS\002_ПЕРВАЯ ЧЕТВЕРТЬ\004_ЗНАКОМСТВО С ЯЗЫКОМ ПРОГРАММИРОВАНИЯ C#\Lesson-03\Lecture03_Task01\obj\Debug\net6.0\refint\Lecture03_Task01.dll
+J:\MY\_WEB\_GEEKBRAINS\002_ПЕРВАЯ ЧЕТВЕРТЬ\004_ЗНАКОМСТВО С ЯЗЫКОМ ПРОГРАММИРОВАНИЯ C#\Lesson-03\Lecture03_Task01\obj\Debug\net6.0\Lecture03_Task01.pdb
+J:\MY\_WEB\_GEEKBRAINS\002_ПЕРВАЯ ЧЕТВЕРТЬ\004_ЗНАКОМСТВО С ЯЗЫКОМ ПРОГРАММИРОВАНИЯ C#\Lesson-03\Lecture03_Task01\obj\Debug\net6.0\Lecture03_Task01.genruntimeconfig.cache
+J:\MY\_WEB\_GEEKBRAINS\002_ПЕРВАЯ ЧЕТВЕРТЬ\004_ЗНАКОМСТВО С ЯЗЫКОМ ПРОГРАММИРОВАНИЯ C#\Lesson-03\Lecture03_Task01\obj\Debug\net6.0\ref\Lecture03_Task01.dll
