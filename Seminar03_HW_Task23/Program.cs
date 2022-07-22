@@ -6,22 +6,47 @@ string? numberStr = Console.ReadLine();
 if (numberStr != null)
 {
    int number = int.Parse(numberStr);
-   Console.WriteLine(number);
-   string numberLine = String.Empty;
-   string powerThreeLine = String.Empty;
-   for (int count = 1; count <= number - 1; count++)
+
+   string[,] numberLine = new string[(number / 15) + 1, 15];
+   string[,] powerThreeLine = new string[number / 15 + 1, 15];
+
+   int n = number / 15;
+   int i = 0;
+   string oneString = String.Empty;
+   string onePower = String.Empty;
+   while (i < n)
    {
-      numberLine = numberLine + count.ToString() + "\t|";
-      powerThreeLine = powerThreeLine + (Math.Pow(count, 3)).ToString() + "\t|";
+      oneString = "|";
+      onePower = "|";
+      for (int j = 0; j < 15; j++)
+      {
+         numberLine[i, j] = (i * 15 + j + 1).ToString();
+         powerThreeLine[i, j] = Math.Pow(Convert.ToInt32(numberLine[i, j]), 3).ToString();
+         oneString = oneString + numberLine[i, j] + "\t|";
+         onePower = onePower + powerThreeLine[i, j] + "\t|";
+      }
+
+      Console.WriteLine(new string('-', 8 * 15));
+      Console.WriteLine(oneString);
+      Console.WriteLine(new string('-', 8 * 15));
+      Console.WriteLine(onePower);
+      Console.WriteLine(new string('-', 8 * 15));
+      i++;
    }
-   numberLine = numberLine + number.ToString();
-   powerThreeLine = powerThreeLine + (Math.Pow(number, 3)).ToString();
 
-   Console.WriteLine(new string('-', 120));
-   Console.WriteLine(numberLine);
-   Console.WriteLine(new string('-', 120));
-   Console.WriteLine(powerThreeLine);
-   Console.WriteLine(new string('-', 120));
+   oneString = "|";
+   onePower = "|";
+   for (int j = 0; j < (number % 15); j++)
+   {
+      numberLine[i, j] = (i * 15 + j + 1).ToString();
+      powerThreeLine[i, j] = Math.Pow(Convert.ToInt32(numberLine[i, j]), 3).ToString();
+      oneString = oneString + numberLine[i, j] + "\t|";
+      onePower = onePower + powerThreeLine[i, j] + "\t|";
+   }
+   Console.WriteLine(new string('-', 8 * (number % 15)));
+   Console.WriteLine(oneString);
+   Console.WriteLine(new string('-', 8 * (number % 15)));
+   Console.WriteLine(onePower);
+   Console.WriteLine(new string('-', 8 * (number % 15)));
+   Console.WriteLine();
 }
-
-
