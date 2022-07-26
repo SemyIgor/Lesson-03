@@ -17,8 +17,8 @@ if (numberStr != null)
    string onePower = String.Empty;
    while (i < n)
    {
-      oneString = "|Число" + "\t|";
-      onePower = "|Куб" + "\t|";
+      oneString = "| Число" + "\t|";
+      onePower = "| Куб" + "\t|";
       for (int j = 0; j < numbersInLine; j++)
       {
          numberLine[i, j] = (i * numbersInLine + j + 1).ToString();
@@ -27,16 +27,16 @@ if (numberStr != null)
          onePower = onePower + powerThreeLine[i, j] + "\t|";
       }
 
-      Console.WriteLine(new string('-', 8 * (numbersInLine + 1)));
+      Console.WriteLine(new string('-', 8 * (numbersInLine + 1)) + "-");
       Console.WriteLine(oneString);
-      Console.WriteLine(new string('-', 8 * (numbersInLine + 1)));
+      Console.WriteLine(new string('-', 8 * (numbersInLine + 1)) + "-");
       Console.WriteLine(onePower);
-      Console.WriteLine(new string('-', 8 * (numbersInLine + 1)));
+      Console.WriteLine(new string('-', 8 * (numbersInLine + 1)) + "-");
       i++;
    }
 
-   oneString = "|Число" + "\t|";
-   onePower = "|Куб" + "\t|";
+   oneString = "| Число" + "\t|";
+   onePower = "| Куб" + "\t|";
    for (int j = 0; j < (number % numbersInLine); j++)
    {
       numberLine[i, j] = (i * numbersInLine + j + 1).ToString();
@@ -44,10 +44,10 @@ if (numberStr != null)
       oneString = oneString + numberLine[i, j] + "\t|";
       onePower = onePower + powerThreeLine[i, j] + "\t|";
    }
-   Console.WriteLine(new string('-', 8 * ((number % numbersInLine) + 1)));
+   Console.WriteLine(new string('-', 8 * ((number % numbersInLine) + 1)) + "-");
    Console.WriteLine(oneString);
-   Console.WriteLine(new string('-', 8 * ((number % numbersInLine) + 1)));
+   Console.WriteLine(new string('-', 8 * ((number % numbersInLine) + 1)) + "-");
    Console.WriteLine(onePower);
-   Console.WriteLine(new string('-', 8 * ((number % numbersInLine) + 1)));
+   Console.WriteLine(new string('-', 8 * ((number % numbersInLine) + 1)) + "-");
    Console.WriteLine();
 }
