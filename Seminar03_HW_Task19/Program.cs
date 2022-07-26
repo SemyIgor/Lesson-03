@@ -4,29 +4,22 @@
 void VariantI(int num)
 {
    Console.WriteLine("Variant I");
-   if ((num < 100000) && (num > 9999)) // check if the num is 5-digit number
+   int[] digits = new int[5];
+   int remainder = num;
+   for (int i = 4; i >= 0; i--)   // Turn 5-digit number into 5-element array
    {
-      int[] digits = new int[5];
-      int remainder = num;
-      for (int i = 4; i >= 0; i--)   // Turn 5-digit number into 5-element array
-      {
-         digits[i] = remainder % 10; // Save last digit into array digits[]
-         remainder = remainder / 10; // Cut last digit of the received number num _
-                                     // to take it's last digit at the previous step
-      }
-      if ((digits[0] == digits[4]) && (digits[1] == digits[3])) // Compare numbers 1st <=> 5th and 2nd <=> 4th _
-                                                                // (5th does not matter)
-      {
-         Console.WriteLine($"Число {num} является полиндромом");
-      }
-      else
-      {
-         Console.WriteLine($"Число {num} не является полиндромом");
-      }
+      digits[i] = remainder % 10; // Save last digit into array digits[]
+      remainder = remainder / 10; // Cut last digit of the received number num _
+                                  // to take it's last digit at the previous step
+   }
+   if ((digits[0] == digits[4]) && (digits[1] == digits[3])) // Compare numbers 1st <=> 5th and 2nd <=> 4th _
+                                                             // (5th does not matter)
+   {
+      Console.WriteLine($"Число {num} является полиндромом");
    }
    else
    {
-      Console.WriteLine(num + " не пятизначное число");
+      Console.WriteLine($"Число {num} не является полиндромом");
    }
    Console.WriteLine();
 }
@@ -83,13 +76,40 @@ void VariantIII(int num)
    Console.WriteLine(result);
 }
 
-Console.Clear(); // Clear console
-Console.Write("Введите пятизначное число: "); // Enter number as a string
-string? numberStr = Console.ReadLine();       //
-if (numberStr != null)     // Check if the string is empty. If so the next mod performs
+int InputNumber()
 {
-   int number = int.Parse(numberStr); // String to integer number
-   VariantI(number);          // Call method Variant I
-   VariantII(number);            // Call method Variant II
-   VariantIII(number);            // Call method Variant III
+   Console.Clear(); // Clear console
+   Console.Write("Введите пятизначное число: "); // Enter number as a string
+   string? numberStr = Console.ReadLine();       //
+   if ((numberStr != null) && (numberStr != ""))     // Check if the string is empty. If so the next mod performs
+   {
+      int number = int.Parse(numberStr); // String to integer number
+      if ((number < 100000) && (number > 9999)) // check if the number is 5-digit number
+      {
+         return number;
+      }
+      else
+      {
+         return -1; // не пятизначное число
+         // Console.WriteLine(number + " не пятизначное число");
+      }
+   }
+   return -2; // Ошибка ввода. введена пустая строка
+}
+
+int number = InputNumber();
+
+switch (number)
+{
+   case -1:
+      Console.WriteLine("не пятизначное число");
+      break;
+   case -2:
+      Console.WriteLine("Ошибка ввода !");
+      break;
+   default:
+      VariantI(number);          // Call method Variant I
+      VariantII(number);            // Call method Variant II
+      VariantIII(number);            // Call method Variant III
+      break;
 }
