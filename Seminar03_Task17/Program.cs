@@ -39,6 +39,7 @@ void VariantI()
 }
 
 // VariantII. Prints quadrant number (enter coordinats using string form "x=34; y=-18")
+// Using embedded method [ printQuadrant(readPoints()); ]
 // ===================================================================================
 // Read input line and output two-dimensional array of point's coordinates
 int[,] readPoints()
@@ -49,18 +50,20 @@ int[,] readPoints()
    {
       Console.Write("Enter coordinates using x=34 ; y=-18 form: ");
       string? inputLine = Console.ReadLine();
-      string coordXLine = inputLine.Substring(0, inputLine.IndexOf(";"));
-      coordXLine = coordXLine.Substring(coordXLine.IndexOf("=") + 1);
+      if ((inputLine != null) && (inputLine != ""))
+      {
+         string coordXLine = inputLine.Substring(0, inputLine.IndexOf(";"));
+         coordXLine = coordXLine.Substring(coordXLine.IndexOf("=") + 1);
 
-      string coordYLine = inputLine.Substring(inputLine.IndexOf(";") + 1);
-      coordYLine = coordYLine.Substring(coordYLine.IndexOf("=") + 1);
+         string coordYLine = inputLine.Substring(inputLine.IndexOf(";") + 1);
+         coordYLine = coordYLine.Substring(coordYLine.IndexOf("=") + 1);
 
-      int coordX = int.Parse(coordXLine);
-      int coordY = int.Parse(coordYLine);
+         int coordX = int.Parse(coordXLine);
+         int coordY = int.Parse(coordYLine);
 
-      arrayOut[0, 0] = coordX;
-      arrayOut[0, 1] = coordY;
-
+         arrayOut[0, 0] = coordX;
+         arrayOut[0, 1] = coordY;
+      }
       return arrayOut;
    }
    catch
@@ -100,7 +103,7 @@ void printQuadrant(int[,] readPoints)
 
 Console.Clear();
 
-// VariantI
+// Variant I. Enter every coordinate separately
 VariantI();
 Console.WriteLine();
 
