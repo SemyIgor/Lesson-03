@@ -10,9 +10,9 @@ string inputString()
 }
 
 // Iteration cycling to add up indexes from 1 to A
-void VariantSimple(double num)
+void VariantSimple(long num)
 {
-   double sum = 0;
+   long sum = 0;
    for (int i = 1; i <= num; i++)
    {
       sum += i;
@@ -23,9 +23,9 @@ void VariantSimple(double num)
 }
 
 // Gauss method (A*(A+1)) /2
-void VariantGauss(double num)
+void VariantGauss(long num)
 {
-   double sum = (num * (num + 1)) / 2;
+   long sum = (num * (num + 1)) / 2;
    Console.WriteLine("VariantGauss");
    Console.WriteLine($"Сумма чисел от 1 до {num} равна {sum}");
    // Console.WriteLine("");
@@ -34,7 +34,7 @@ void VariantGauss(double num)
 string inpString = inputString();
 if (inpString != null)
 {
-   double number = double.Parse(inpString);
+   long number = long.Parse(inpString);
 
    t = Environment.TickCount; // getting tick count
    VariantSimple(number);
