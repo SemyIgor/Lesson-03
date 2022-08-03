@@ -1,6 +1,6 @@
 ﻿// Lesson-03. Seminar04_Task24. Find sum of all natural numbers from 1 to N
 Console.Clear();
-int t; // ticks of the clock gentrator
+long t; // ticks of the clock gentrator
 
 string inputString()
 {

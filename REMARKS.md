@@ -32,3 +32,8 @@ here _`10 - padding left, 4 - padding top`_
 1. new Random().Next(min,max)
    Gives random integer from min to max-1 We can write it's range:
    - [min, max-1] or [min, max)
+
+## Lesson-03_Seminar04_Task26
+
+Lesson-03_Seminar04_Task26. Enter natural number and return the number of it's digits.
+Using ticks of the clock gentrator.
