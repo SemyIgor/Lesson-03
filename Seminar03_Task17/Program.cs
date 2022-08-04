@@ -48,7 +48,7 @@ int[,] readPoints()
    try
    {
       Console.Write("Enter coordinates using x=34 ; y=-18 form: ");
-      string? inputLine = Console.ReadLine();
+      string inputLine = Console.ReadLine() ?? "";
       string coordXLine = inputLine.Substring(0, inputLine.IndexOf(";"));
       coordXLine = coordXLine.Substring(coordXLine.IndexOf("=") + 1);
 

@@ -5,7 +5,7 @@ long t; // ticks of the clock gentrator
 string inputString()
 {
    Console.Write("Введите любое натуральное число: ");
-   string? stringNumber = Console.ReadLine();
+   string stringNumber = Console.ReadLine() ?? "";
    return stringNumber;
 }
 
