@@ -1,7 +1,7 @@
-﻿// Lesson-03_Seminar04_Task26. Enter natural number and return the number of it's digits. Environment.TickCount.
+﻿// Lesson-03_Seminar04_Task26-1. Enter natural number and return the number of it's digits. DateTime.Now.
 
 Console.Clear();
-long timing; // ticks of the clock gentrator
+DateTime timeSharp; // System time
 
 string inputString() // Enter string of digits
 {
@@ -43,7 +43,7 @@ int VariantRecurrent(ref int digitsCount, long numStr) // Recursively dividing t
    return VariantRecurrent(ref digitsCount, numStr / 10);
 }
 
-void VariantLog10(long number) // 
+void VariantLog10(long number) // Getting logarithm of the received number
 // Получаем логарифм введенного числа
 {
    Console.WriteLine("Во введенном числе {0} цифр", ((long)Math.Log10(number) + 1));
@@ -57,21 +57,21 @@ try // Trying if the received string could be transformed into number
 {
    long numberStr = long.Parse(inpString);
 
-   timing = Environment.TickCount; // getting tick count
+   timeSharp = DateTime.Now;
    VariantNumeral(numberStr); // Calling Number method
-   Console.WriteLine("Numeral time = {0} ms", Environment.TickCount - timing);
+   Console.WriteLine("Numeral time = {0} ms", DateTime.Now - timeSharp);
    Console.WriteLine();
 
-   timing = Environment.TickCount; // getting tick count
+   timeSharp = DateTime.Now;
    VariantLog10(numberStr); // Calling Number method
-   Console.WriteLine("Logarithm time = {0} ms", Environment.TickCount - timing);
+   Console.WriteLine("Logarithm time = {0} ms", DateTime.Now - timeSharp);
    Console.WriteLine();
 
-   timing = Environment.TickCount; // getting tick count
+   timeSharp = DateTime.Now;
    int digitsCount = 0;
    VariantRecurrent(ref digitsCount, numberStr); // Calling Recurrent method
    Console.WriteLine("Во введенном числе {0} цифр", digitsCount);
-   Console.WriteLine("Recurrent time = {0} ms", Environment.TickCount - timing);
+   Console.WriteLine("Recurrent time = {0} ms", DateTime.Now - timeSharp);
    Console.WriteLine();
 }
 catch
@@ -83,14 +83,14 @@ finally
    Console.WriteLine();
 }
 
-timing = Environment.TickCount; // getting tick count
+timeSharp = DateTime.Now;
 VariantChar(inpString); // Calling Char method 
-Console.WriteLine("Char time = {0} ms", Environment.TickCount - timing);
+Console.WriteLine("Char time = {0} ms", DateTime.Now - timeSharp);
 Console.WriteLine(); // Line to separate results of different methods
 
-timing = Environment.TickCount; // getting tick count
+timeSharp = DateTime.Now;
 VariantString(inpString); // Calling String method
-Console.WriteLine("String time = {0} ms", Environment.TickCount - timing);
+Console.WriteLine("String time = {0} ms", DateTime.Now - timeSharp);
 Console.WriteLine();
 
 
