@@ -31,7 +31,7 @@ long VariantRecurs(long inpNumber)
 
 long VariantRecursDouble(long inpNumber)
 {
-   if (inpNumber <= 1) return inpNumber;
+   if (inpNumber <= 2) return inpNumber;
    return inpNumber * (inpNumber - 1) * VariantRecurs(inpNumber - 2);
 }
 
