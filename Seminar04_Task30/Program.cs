@@ -8,7 +8,6 @@ void VariantNaive()
 {
    for (int j = 0; j < 10; j++)
    {
-      long number = 0;
       Console.Write("[");
       for (int i = 0; i < 7; i++)
       {
@@ -16,7 +15,6 @@ void VariantNaive()
       }
       Console.Write(numberSintezator.Next(0, 2) + "]\n");
    }
-
 }
 
 void VariantFormat()

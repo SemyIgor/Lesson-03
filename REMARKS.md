@@ -37,3 +37,14 @@ here _`10 - padding left, 4 - padding top`_
 
 Lesson-03_Seminar04_Task26. Enter natural number and return the number of it's digits.
 Using ticks of the clock gentrator.
+
+## Lesson-03_Seminar04_Task25
+
+Code cycle to perform '+', '-', '\*', '/', '^' operations
+
+1. Invitation to input arithmetic problem (for example: 4/2; 7^2; 8 -3 etc.).
+2. Split problem to numbers and operators.
+3. Choose operation and it's method.
+4. Call respective method.
+5. Print result.
+6. Return to invitation.
