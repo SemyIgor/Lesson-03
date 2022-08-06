@@ -11,7 +11,7 @@
 // 5. Print result.
 // 6. Return to invitation.
 
-void calculator() // launches calculator
+void Calculator() // launches calculator
 {
    string stringLine = String.Empty;
    string mathOperator = String.Empty;
@@ -20,46 +20,56 @@ void calculator() // launches calculator
 
    while (stringLine.ToLower() != "q")
    {
-      invitation(); // Prints an invitation to input problem and a short instruction how to do it
-      stringLine = inputString().Replace(" ", String.Empty); // Receives the line of problem and delets spaces in it
-      switch (takeOperator(stringLine)) // Takes the operator sign and perform respective math operation
+      Invitation(); // Prints an invitation to input problem and a short instruction how to do it
+
+      try
       {
-         case "+":
-            mathOperator = "+";
-            takeNumbers(stringLine, mathOperator, out numberFirst, out numberSecond); // extract numbers
-            Console.WriteLine("{0} {1} {2} = {3}", numberFirst, mathOperator, numberSecond, numberFirst + numberSecond); // calculate and print result
-            break;
-         case "-":
-            mathOperator = "-";
-            takeNumbers(stringLine, mathOperator, out numberFirst, out numberSecond);
-            Console.WriteLine("{0} {1} {2} = {3}", numberFirst, mathOperator, numberSecond, numberFirst - numberSecond);
-            break;
-         case "*":
-            mathOperator = "*";
-            takeNumbers(stringLine, mathOperator, out numberFirst, out numberSecond);
-            Console.WriteLine("{0} {1} {2} = {3}", numberFirst, mathOperator, numberSecond, numberFirst * numberSecond);
-            break;
-         case "/":
-            mathOperator = "/";
-            takeNumbers(stringLine, mathOperator, out numberFirst, out numberSecond);
-            Console.WriteLine("{0} {1} {2} = {3}", numberFirst, mathOperator, numberSecond, numberFirst / numberSecond);
-            break;
-         case "^":
-            mathOperator = "^";
-            takeNumbers(stringLine, mathOperator, out numberFirst, out numberSecond);
-            Console.WriteLine("{0} {1} {2} = {3}", numberFirst, mathOperator, numberSecond, Math.Pow(numberFirst, numberSecond));
-            break;
-         case "":
-            Console.WriteLine("Повторите ввод, не понял задачу");
-            break;
+         stringLine = InputString().Replace(" ", String.Empty); // Receives the line of problem and delets spaces in it
+
+         switch (TakeOperator(stringLine)) // Takes the operator sign and perform respective math operation
+         {
+            case "+":
+               mathOperator = "+";
+               TakeNumbers(stringLine, mathOperator, out numberFirst, out numberSecond); // extract numbers
+               Console.WriteLine("{0} {1} {2} = {3}", numberFirst, mathOperator, numberSecond, numberFirst + numberSecond); // calculate and print result
+               break;
+            case "-":
+               mathOperator = "-";
+               TakeNumbers(stringLine, mathOperator, out numberFirst, out numberSecond);
+               Console.WriteLine("{0} {1} {2} = {3}", numberFirst, mathOperator, numberSecond, numberFirst - numberSecond);
+               break;
+            case "*":
+               mathOperator = "*";
+               TakeNumbers(stringLine, mathOperator, out numberFirst, out numberSecond);
+               Console.WriteLine("{0} {1} {2} = {3}", numberFirst, mathOperator, numberSecond, numberFirst * numberSecond);
+               break;
+            case "/":
+               mathOperator = "/";
+               TakeNumbers(stringLine, mathOperator, out numberFirst, out numberSecond);
+               Console.WriteLine("{0} {1} {2} = {3}", numberFirst, mathOperator, numberSecond, numberFirst / numberSecond);
+               break;
+            case "^":
+               mathOperator = "^";
+               TakeNumbers(stringLine, mathOperator, out numberFirst, out numberSecond);
+               Console.WriteLine("{0} {1} {2} = {3}", numberFirst, mathOperator, numberSecond, Math.Pow(numberFirst, numberSecond));
+               break;
+            case "":
+               Console.WriteLine("Повторите ввод, не понял задачу");
+               break;
+         }
       }
+      catch
+      {
+         Console.WriteLine("Ошибка ввода ! Попробуйте ещё.");
+      }
+
       Console.WriteLine("Нажмите ENTER чтобы продолжить");
       while (Console.ReadKey().Key != ConsoleKey.Enter) { }
       // System.Threading.Thread.Sleep(3000);
    }
 }
 
-void invitation() // Prints an invitation to input problem and a short instruction how to do it
+void Invitation() // Prints an invitation to input problem and a short instruction how to do it
 {
    Console.Clear();
    Console.WriteLine("Введите арифметический пример по форме:");
@@ -71,19 +81,19 @@ void invitation() // Prints an invitation to input problem and a short instructi
    Console.WriteLine("Для выхода из программы введите q или Q");
 }
 
-string inputString() // Enter string of problem
+string InputString() // Enter string of problem
 {
    string stringNumber = Console.ReadLine() ?? "";
    return stringNumber;
 }
 
-void takeNumbers(string strLine, string mathOp, out double numFirst, out double numSecond) // Takes numbers
+void TakeNumbers(string strLine, string mathOp, out double numFirst, out double numSecond) // Takes numbers
 {
    numFirst = double.Parse(strLine.Substring(0, strLine.IndexOf(mathOp))); // Takes the first number of the math problem
    numSecond = double.Parse(strLine.Substring(strLine.IndexOf(mathOp) + 1)); // Takes the second number of the math problem
 }
 
-string takeOperator(string strLine) // Takes an operator of the math problem
+string TakeOperator(string strLine) // Takes an operator of the math problem
 {
    if (strLine.Contains("+")) return "+";
    if (strLine.Contains("*")) return "*";
@@ -94,4 +104,4 @@ string takeOperator(string strLine) // Takes an operator of the math problem
    return "";
 }
 
-calculator();
+Calculator();
