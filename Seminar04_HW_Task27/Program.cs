@@ -48,7 +48,7 @@ void VariantNumeral(string inputNumberStr) // Variant Numeral (Variant I)
    }
    catch
    {
-      Console.WriteLine("Ошибка! Вы ввели не натуральное число.");
+      Console.WriteLine("Ошибка! Вы ввели не натуральное или слишком большое число.");
       return; // Exit method without parameter
    }
 
