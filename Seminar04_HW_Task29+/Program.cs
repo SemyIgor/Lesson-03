@@ -21,6 +21,7 @@ void ProblemStatement() // Algorithms description
    // 3. Random choice one name from the array
    // 5. Print chosen name.
 }
+ProblemStatement(); // Just to take away warning message
 
 void ChooseVariant(string choice) // Choose variant of decision and starts it
 {
@@ -76,16 +77,19 @@ void VariantEnterSeparated()
    string inputMessage = "Вводите имена, завершая ввод каждого имени\n" +   // Invitation text
    "нажатием клавиши ENTER.\n" + "Для завершения введите 'ъ' твёрдый знак"; // text continuation
    OutputString(inputMessage); // Invites to enter and enters names
-   OutputString(EnterNames(playersList)); //Fills player's list and gives random name from it
+   OutputString(EnterNames(playersList)); // Output result name
 }
 
-string EnterNames(List<string> enteredList)
+string EnterNames(List<string> enteredList) //Fills player's list and gives random name from it
 {
    string name = String.Empty;   // Name to add it to list
    while (name != "ъ")           // Flag to stop input names
    {
-      name = Console.ReadLine(); // Enter a name to variable
-      enteredList.Add(name);     // Add variable to the list
+      name = Console.ReadLine() ?? ""; // Enter a name to variable
+      if (name != null && name != "" && name != " ") // If false, then skip next block 
+      {
+         enteredList.Add(name);     // Add variable to the list
+      }
    }
    // while (Console.ReadKey().Key != ConsoleKey.Escape);
    enteredList.Remove(name); // Deleting 'ъ' from the list
