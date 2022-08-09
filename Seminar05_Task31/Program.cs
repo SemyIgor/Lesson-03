@@ -39,7 +39,7 @@ void VariantMy()     // VariantI
    Console.WriteLine("{0, 6}{1, 6}{2, 6}", "Array", "Pos", "Neg");      // Header of the output
    for (int i = 0; i < 12; i++)                                         // Cycle
    {
-      array[i] = numberSintezator.Next(-9, 9);  // Generate next array's element
+      array[i] = numberSintezator.Next(-9, 10);  // Generate next array's element
       if (array[i] < 0)
       {
          sumMinus += array[i];                  // Sum negatives
@@ -67,7 +67,7 @@ int[] GenerateArray(int arrayLength)   // Generate array with length received
    int[] array = new int[arrayLength];
    for (int i = 0; i < arrayLength; i++)
    {
-      array[i] = numberSintezator.Next(-9, 9); // Generates next random element
+      array[i] = numberSintezator.Next(-9, 10); // Generates next random element
    }
    return array;
 }

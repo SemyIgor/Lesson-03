@@ -43,6 +43,7 @@ int[] ReverseArray(int[] arrayOld)
    for (int i = 0; i < arrayOld.Length; i++)
    {
       arrayNew[i] = arrayOld[i] * (-1);
+      // arrayNew[i] = ~arrayOld[i] + 1; // This works faster
    }
    return arrayNew;  // Returns array
 }
