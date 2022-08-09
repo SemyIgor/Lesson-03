@@ -57,7 +57,7 @@ void VariantMy()     // VariantI
 
 void VariantMain()   // VariantII
 {
-   Console.WriteLine("Variant I");
+   Console.WriteLine("Variant II");
    IterateArray(GenerateArray(arrayLength));
    Console.WriteLine();
 }
@@ -65,7 +65,7 @@ void VariantMain()   // VariantII
 int[] GenerateArray(int arrayLength)   // Generate array with length received 
 {
    int[] array = new int[arrayLength];
-   for (int i = 0; i < 12; i++)
+   for (int i = 0; i < arrayLength; i++)
    {
       array[i] = numberSintezator.Next(-9, 9); // Generates next random element
    }
@@ -96,7 +96,6 @@ void IterateArray(int[] array)
    Console.Write("{0, 6}{1,6}{2,6}\n", "Итого", sumPlus, sumMinus);  // Print result line
 }
 
+VariantMy();
 
 VariantMain();
-
-VariantMy();
