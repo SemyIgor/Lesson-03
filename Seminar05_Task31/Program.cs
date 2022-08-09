@@ -67,7 +67,7 @@ int[] GenerateArray(int arrayLength)   // Generate array with length received
    int[] array = new int[arrayLength];
    for (int i = 0; i < arrayLength; i++)
    {
-      array[i] = numberSintezator.Next(-9, 9); // Generates next random element
+      array[i] = numberSintezator.Next(-9, 10); // Generates next random element
    }
    return array;
 }
