@@ -11,9 +11,7 @@ void ProblemStatement() // Algorithms description
    // 1. Declare arrayLength-elements array
    // 2. Generate array: Cycle ("arrayLength" times):
    // 3. Print generated array.
-   // 4. Declare new array (List<>)
-   //    - iterate initial array and add it's items with even velues to the List<>
-   // 5. Print formed array (List<>);
+   // 4. Сount even items
    // * ============================================
    // 4.* Sort initial array using bubble sort
    // 4.** Sort initial array using counting sort
