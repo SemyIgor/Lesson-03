@@ -21,11 +21,10 @@ ProblemStatement(); // Just to take away warning message
 void VariantMain()
 {
    int arrayLength = 123;
-   int minValue = 0;
-   int maxValue = 500;
-   int rangeFrom = 10;
-   int rangeTo = 99;
-
+   int minValue = 0;       // min value of the array's item (for randomizer)
+   int maxValue = 500;     // max value of the array's item (for randomizer)
+   int rangeFrom = 10;     // minimum value of the searched item
+   int rangeTo = 99;       // maximum value of the searched item
 
    int[] generatedArray = GenerateArray(arrayLength, minValue, maxValue);
    PrintArray(generatedArray);
@@ -50,13 +49,13 @@ int[] GenerateArray(int arrayLength, int minValue, int maxValue)   // Generate a
 void PrintArray(int[] array) // Print given array
 {
    int i = 0;
-   Console.Write("[");
+   Console.Write($"[");
    while (i < array.Length - 1) // Print elements and commas, but not last element
    {
-      Console.Write(array[i] + ", ");
+      Console.Write("{0,4}, ", array[i]);
       i++;
    }
-   Console.WriteLine(array[i] + "]\n");
+   Console.WriteLine("{0,4} ]\n", array[i]);
 }
 
 int CountItemsByRange(int[] receivedArray, int rangeFrom, int rangeTo)
