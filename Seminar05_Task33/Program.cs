@@ -2,6 +2,8 @@
 
 System.Random numberSintezator = new Random();
 int arrayLength = 12;
+int minValue = -10;
+int maxValue = 10;
 
 void ProblemStatement() // Algorithms description
 {
@@ -20,7 +22,7 @@ ProblemStatement(); // Just to take away warning message
 
 void VariantMain()
 {
-   string invitationMessage = "Скажите, какое число ищем в массиве: ";
+   string invitationMessage = $"Скажите, какое число от {minValue} до {maxValue} ищем в массиве: ";
    int searchingNumber = InputString(invitationMessage); // Printing message and receiving number
 
    int[] generatedArray = GenerateArray(arrayLength); // Generate array with length received
@@ -35,7 +37,7 @@ int[] GenerateArray(int arrayLength)   // Generate array with length received
    int[] array = new int[arrayLength];
    for (int i = 0; i < arrayLength; i++)
    {
-      array[i] = numberSintezator.Next(-10, 11); // Generates next random element
+      array[i] = numberSintezator.Next(minValue, maxValue + 1); // Generates next random element
    }
    Console.WriteLine();
    return array;  // Returns array
