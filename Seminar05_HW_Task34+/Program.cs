@@ -11,7 +11,7 @@
 
 void VariantBubbleSort()
 {
-   // Console.Clear();
+   Console.Clear();
    int arrayLength = 123;
    int minValue = 100;       // min value of the array's item (for randomizer)
    int maxValue = 999;     // max value of the array's item (for randomizer)
