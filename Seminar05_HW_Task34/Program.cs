@@ -14,7 +14,7 @@
 // 4.* Sort initial array using bubble sort
 // 4.** Sort initial array using counting sort
 
-void VariantSort()
+void VariantFindMinMax()
 {
    Console.Clear();
    int arrayLength = 123;
@@ -75,6 +75,6 @@ void OutputString(string message) // Just print received message
    Console.WriteLine(message);
 }
 
-VariantSort();
+VariantFindMinMax();
 
 
