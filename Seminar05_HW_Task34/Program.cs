@@ -1,22 +1,18 @@
 ﻿// Lesson-03_Seminar05_Task34. Generate array, count even items
 // * Sort array by bubble sort
 // 
-void ProblemStatement() // Algorithms description
-{
-   // Conditions:
-   // Generate array, count even items.
-   // * Sort array by bubble sort.
+// Conditions:
+// Generate array, count even items.
+// * Sort array by bubble sort.
 
-   // Algorithms:
-   // 1. Declare arrayLength-elements array
-   // 2. Generate array: Cycle ("arrayLength" times):
-   // 3. Print generated array.
-   // 4. Сount even items
-   // * ============================================
-   // 4.* Sort initial array using bubble sort
-   // 4.** Sort initial array using counting sort
-}
-ProblemStatement(); // Just to take away warning message
+// Algorithms:
+// 1. Declare arrayLength-elements array
+// 2. Generate array: Cycle ("arrayLength" times):
+// 3. Print generated array.
+// 4. Сount even items
+// * ============================================
+// 4.* Sort initial array using bubble sort
+// 4.** Sort initial array using counting sort
 
 void VariantSort()
 {
