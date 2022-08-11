@@ -80,9 +80,4 @@ int[] FormNewArrayViaIterate(int[] array)
    return outputArray;
 }
 
-void VariantSwap()
-{
-
-}
-
 VariantIterate();
