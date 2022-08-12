@@ -35,7 +35,6 @@ void VariantSortingThreeMethods()
    Console.WriteLine("Selection time = {0} ms", DateTime.Now - timeSharp);
    PrintArray(ArraySelectionSorted);
 
-
    Console.WriteLine("Массив, отсортированный сортировкой подсчёта");
    timeSharp = DateTime.Now;
    int[] ArrayCountingSorted = CountingSort(ArrayGenerated, minValue, maxValue);
@@ -96,6 +95,7 @@ int[] BubbleSort(int[] array) // Sorts given array with bubble sort method
       }
       cycle++; // Count passes through array
    }
+   Console.WriteLine("Разница между первым и последним элементом равна {0}", arraySorted[arraySorted.Length - 1] - arraySorted[0]);
    return arraySorted;
 }
 
@@ -121,6 +121,7 @@ int[] SelectionSort(int[] array) // Sorts given array with counting sort method
       sortedArray[i] = sortedArray[k];
       sortedArray[k] = minUnsortedItem;
    }
+   Console.WriteLine("Разница между первым и последним элементом равна {0}", sortedArray[sortedArray.Length - 1] - sortedArray[0]);
    return sortedArray;
 }
 
@@ -147,6 +148,7 @@ int[] CountingSort(int[] array, int minValue, int maxValue) // Sorts given array
          }
       }
    }
+   Console.WriteLine("Разница между первым и последним элементом равна {0}", sortedArray[sortedArray.Length - 1] - sortedArray[0]);
    return sortedArray;
 }
 
