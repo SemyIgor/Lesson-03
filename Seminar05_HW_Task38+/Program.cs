@@ -1,4 +1,4 @@
-﻿// Lesson-03_Seminar05_Task34+. Generate array, * Sort array by counting sort and selection sort
+﻿// Lesson-03_Seminar05_Task38+. Generate array, * Sort array by counting sort and selection sort
 
 // Conditions:
 // Generate array, * Sort array by counting sort and insertion sort.
