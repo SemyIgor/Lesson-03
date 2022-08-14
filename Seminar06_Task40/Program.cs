@@ -15,15 +15,15 @@ void IsItTriangle()
    // Block of messages
    // ---------------------------------------------------------------------------------------------
    string inputMessage = "Введите длины сторон треугольника через запятую:\n"; // Invitation message
-   string itIsTriangle = "Мы получим треугольник, если соединим данные точки"; // It is triangle
+   string itIsTriangle = "Мы сможем получить треугольник из этих отрезков"; // It is triangle
    string itIsNotTriangle =
-   "Мы не сможем получить треугольник, если соединим данные точки"; // It is not tirangle
+   "Мы не сможем получить треугольник из этих отрезков"; // It is not tirangle
    // ---------------------------------------------------------------------------------------------
 
    string enteredString = InputString(inputMessage); // Inviting message and receiving string
 
    triangleSides = StringToList(enteredString, ','); // Turning string of names into string array of names
-   Console.WriteLine("sideA = {0};\nsideB = {1};\nsideC = {2}",
+   Console.WriteLine("sideA = {0} см;\nsideB = {1} см;\nsideC = {2} см",
    triangleSides[0], triangleSides[1], triangleSides[2]); // Print triangle sides sizies
 
    bool ifTriangle = CheckIfTriangle(triangleSides); // Receiving result of checking
