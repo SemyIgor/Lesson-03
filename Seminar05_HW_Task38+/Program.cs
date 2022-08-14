@@ -14,9 +14,9 @@ void VariantSortingThreeMethods()
 {
    Console.Clear();
    DateTime timeSharp; // System time
-   int arrayLength = 123;
-   int minValue = 100;       // min value of the array's item (for randomizer)
-   int maxValue = 999;     // max value of the array's item (for randomizer)
+   int arrayLength = 12;
+   int minValue = 10;       // min value of the array's item (for randomizer)
+   int maxValue = 99;     // max value of the array's item (for randomizer)
 
    Console.WriteLine("Исходный (сгенерированный) массив");
    int[] ArrayGenerated = GenerateArray(arrayLength, minValue, maxValue);
@@ -29,21 +29,21 @@ void VariantSortingThreeMethods()
    PrintArray(ArraySortedBubble);
 
 
-   Console.WriteLine("Массив, отсортированный сортировкой выбора");
+   Console.WriteLine("Массив, отсортированный методом выбора");
    timeSharp = DateTime.Now;
    int[] ArraySelectionSorted = SelectionSort(ArrayGenerated);
    Console.WriteLine("Selection time = {0} ms", DateTime.Now - timeSharp);
    PrintArray(ArraySelectionSorted);
 
-   Console.WriteLine("Массив, отсортированный сортировкой подсчёта");
+   Console.WriteLine("Массив, отсортированный методом подсчёта");
    timeSharp = DateTime.Now;
    int[] ArrayCountingSorted = CountingSort(ArrayGenerated, minValue, maxValue);
    Console.WriteLine("Counting time = {0} ms", DateTime.Now - timeSharp);
    PrintArray(ArrayCountingSorted);
 
-   // Console.WriteLine("Массив, отсортированный сортировкой вставки");
-   // int[] ArrayInsertionSorted = InsertionSort(ArrayGenerated);
-   // PrintArray(ArrayInsertionSorted);
+   Console.WriteLine("Массив, отсортированный методом вставки");
+   int[] ArrayInsertionSorted = InsertionSort(ArrayGenerated);
+   PrintArray(ArrayInsertionSorted);
 }
 
 int[] GenerateArray(int arrayLength, int minValue, int maxValue)   // Generate array with length received 
@@ -154,10 +154,30 @@ int[] CountingSort(int[] array, int minValue, int maxValue) // Sorts given array
 
 int[] InsertionSort(int[] array) // Sorts given array with insertion sort method
 {
+   int key;
    int[] sortedArray = new int[array.Length];
    array.CopyTo(sortedArray, 0);
 
-
+   for (int i = 1; i < sortedArray.Length; i++)
+   {
+      key = sortedArray[i];
+      // Console.WriteLine("i={0}, key ={1}", i, key);
+      for (int j = i - 1; j < 0; j--)
+      {
+         // Console.WriteLine($"i={i}, j={j}");
+         if (sortedArray[j] > key)
+         {
+            // Console.WriteLine("i={0}, j={1}, key ={2}", i, j, key);
+            sortedArray[j + 1] = sortedArray[j];
+            // key = sortedArray[j];
+            sortedArray[j] = key;
+         }
+         else
+         {
+            break;
+         }
+      }
+   }
    return sortedArray;
 }
 
