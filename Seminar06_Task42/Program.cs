@@ -14,7 +14,7 @@ void ConvertDecToBin()
    // Block of messages
    // -------------------------------------------------------------------------------------
    string inputMessage = "Введите десятичное число:\n"; // Invitation message
-   string outputMessage = "To be continued";
+   // string outputMessage = "To be continued";
    // -------------------------------------------------------------------------------------
 
    string enteredString = InputString(inputMessage); // Inviting message and receiving string
