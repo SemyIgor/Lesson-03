@@ -6,20 +6,20 @@ void CountCoordsOfIntersection() // Main method
    try
    {
       double[,] indexesArray = GetLineIndexesArray(); // Get array of the line's indexes
-      double[,] coordsArray = CountCoordsOfPoints(indexesArray);
+      double[,] coordsArray = CountCoordsOfPoints(indexesArray); // Array of intersection coords
 
-      Console.WriteLine();
-      Console.WriteLine("Коэффициенты прямых:");
-      PrintArray(indexesArray);
+      Console.WriteLine(); // Empty line
+      Console.WriteLine("Коэффициенты прямых:"); // Header
+      PrintArray(indexesArray); // Print array of indexes of lines
 
-      Console.WriteLine();
-      Console.WriteLine("Координаты точек:");
-      PrintArray(coordsArray);
+      Console.WriteLine(); // Empty line
+      Console.WriteLine("Координаты точек:"); // Header
+      PrintArray(coordsArray); // Print array of coordinates of intersections
 
-      Console.WriteLine();
+      Console.WriteLine(); // Empty line
       // Console.WriteLine("Координаты точек:");
-      double triangleArea = TriangleAreaHeron(coordsArray);
-      Console.WriteLine("Площадь полученного треугольника = {0}", triangleArea);
+      double triangleArea = TriangleAreaHeron(coordsArray); // Calculate triangle area
+      Console.WriteLine("Площадь полученного треугольника = {0}", triangleArea); // Print area
 
 
       // === Make it later =========================================
@@ -43,7 +43,7 @@ double InputStringToDouble(string message) // Input string and convert it to int
    return doubleNumber; // Return inputed number (Is equal the length of the Fibonacci sequence)
 }
 
-double[,] GetLineIndexesArray()
+double[,] GetLineIndexesArray() // Enter indexes of lines and fill 2-dimentional array
 {
    double[,] array = new double[3, 2];
 
@@ -65,10 +65,10 @@ double[,] GetLineIndexesArray()
    return array;
 }
 
-double[,] CountCoordsOfPoints(double[,] indexesArray)
+double[,] CountCoordsOfPoints(double[,] indexesArray) // Count coordinates of the intersection point
 {
    double[,] coordsArray = new double[3, 2];
-   // Intersection of lineA and lineB
+   // Intersection of lineA and lineB (x=(b2-b1)/(k1-k2); y=k1*x+b1 or y=k2*x+b2)
    coordsArray[0, 0] = Math.Round(((indexesArray[1, 1] - indexesArray[0, 1]) /
    (indexesArray[0, 0] - indexesArray[1, 0])), 5); // Calculate X of intersection 
    coordsArray[0, 1] = Math.Round((indexesArray[0, 0] * coordsArray[0, 0] +
@@ -79,7 +79,7 @@ double[,] CountCoordsOfPoints(double[,] indexesArray)
    // indexesArray[1, 1]), 5);
    // Console.WriteLine(y1);
 
-   // Intersection of lineA and lineC
+   // Intersection of lineA and lineC (x=(b3-b1)/(k1-k3); y=k1*x+b1 or y=k3*x+b3)
    coordsArray[1, 0] = Math.Round(((indexesArray[2, 1] - indexesArray[0, 1]) /
    (indexesArray[0, 0] - indexesArray[2, 0])), 5); // Calculate X of intersection 
    coordsArray[1, 1] = Math.Round((indexesArray[0, 0] * coordsArray[1, 0] +
@@ -90,7 +90,7 @@ double[,] CountCoordsOfPoints(double[,] indexesArray)
    // indexesArray[2, 1]), 5);
    // Console.WriteLine(y2);
 
-   // Intersection of lineB and lineC
+   // Intersection of lineB and lineC (x=(b3-b2)/(k2-k3); y=k2*x+b2 or y=k3*x+b3)
    coordsArray[2, 0] = Math.Round(((indexesArray[2, 1] - indexesArray[1, 1]) /
    (indexesArray[1, 0] - indexesArray[2, 0])), 5); // Calculate X of intersection 
    coordsArray[2, 1] = Math.Round((indexesArray[1, 0] * coordsArray[2, 0] +
@@ -104,25 +104,23 @@ double[,] CountCoordsOfPoints(double[,] indexesArray)
    return coordsArray;
 }
 
-double TriangleAreaHeron(double[,] coordsArray)
+double TriangleAreaHeron(double[,] coordsArray) // Calculate triangle area with Heron method
 {
    double sideA = Math.Sqrt(Math.Pow(coordsArray[0, 0] - coordsArray[1, 0], 2) +
-   Math.Pow(coordsArray[0, 1] - coordsArray[1, 1], 2));
+   Math.Pow(coordsArray[0, 1] - coordsArray[1, 1], 2)); // Side A of the triangle
    double sideB = Math.Sqrt(Math.Pow(coordsArray[0, 0] - coordsArray[2, 0], 2) +
-   Math.Pow(coordsArray[0, 1] - coordsArray[2, 1], 2));
+   Math.Pow(coordsArray[0, 1] - coordsArray[2, 1], 2)); // Side B of the triangle
    double sideC = Math.Sqrt(Math.Pow(coordsArray[1, 0] - coordsArray[2, 0], 2) +
-   Math.Pow(coordsArray[1, 1] - coordsArray[2, 1], 2));
+   Math.Pow(coordsArray[1, 1] - coordsArray[2, 1], 2)); // Side C of the triangle
 
-   double halfPerimeter = (sideA + sideB + sideC) / 2;
+   double halfPerimeter = (sideA + sideB + sideC) / 2; // Half - perimeter
 
-   double triangleArea = Math.Sqrt(halfPerimeter * (halfPerimeter - sideA) * (halfPerimeter - sideB) * (halfPerimeter - sideC));
+   double triangleArea = Math.Sqrt(halfPerimeter * (halfPerimeter - sideA) * (halfPerimeter - sideB) * (halfPerimeter - sideC)); // Triangle area by Heron's method
 
-   triangleArea = Math.Round(triangleArea, 5);
+   triangleArea = Math.Round(triangleArea, 5); // Round number to five decimal places
 
-   return triangleArea;
+   return triangleArea; // Return area
 }
-
-
 
 void PrintArray(double[,] array) // Print given array
 {
