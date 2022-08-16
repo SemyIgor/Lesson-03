@@ -19,13 +19,13 @@ void CountCoordsOfIntersection() // Main method
       double k1 = InputStringToDouble(k1InputMessage); // Input index k1
 
       string b1InputMessage = "Введите b1 = "; // Invitation message
-      double b1 = InputStringToDouble(b1InputMessage); // Input index k1
+      double b1 = InputStringToDouble(b1InputMessage); // Input index b1
 
       string k2InputMessage = "\nВведите коэффициенты второй прямой\nВведите k2 = "; // Invitation message
-      double k2 = InputStringToDouble(k2InputMessage); // Input index k1
+      double k2 = InputStringToDouble(k2InputMessage); // Input index k2
 
       string b2InputMessage = "Введите b2 = "; // Invitation message
-      double b2 = InputStringToDouble(b2InputMessage); // Input index k1
+      double b2 = InputStringToDouble(b2InputMessage); // Input index b2
 
       if (k1 == k2) /* Verification the lines are parallel */
       {
