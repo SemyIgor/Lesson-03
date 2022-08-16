@@ -27,6 +27,13 @@ void CountCoordsOfIntersection()
       string b2InputMessage = "Введите b2 = "; // Invitation message
       double b2 = InputStringToDouble(b2InputMessage); // Input index k1
 
+      if (k1 == k2)
+      {
+         Console.WriteLine("Эти прямые не пересекаются - они параллельны");
+         return;
+      }
+
+
       double intersectionX = Math.Round(((b2 - b1) / (k1 - k2)), 5); // Calculate X of intersection 
       double intersectionY = Math.Round((k1 * intersectionX + b1), 5); // Calculate Y of intersection
       double intersectionY1 = Math.Round((k2 * intersectionX + b2), 5); // Verification Y be second formula
