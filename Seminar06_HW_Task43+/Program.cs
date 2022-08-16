@@ -74,21 +74,11 @@ double[,] CountCoordsOfPoints(double[,] indexesArray) // Count coordinates of th
    coordsArray[0, 1] = Math.Round((indexesArray[0, 0] * coordsArray[0, 0] +
    indexesArray[0, 1]), 5); // Calculate Y of intersection
 
-   // Проверка по Y
-   // double y1 = Math.Round((indexesArray[1, 0] * coordsArray[0, 0] +
-   // indexesArray[1, 1]), 5);
-   // Console.WriteLine(y1);
-
    // Intersection of lineA and lineC (x=(b3-b1)/(k1-k3); y=k1*x+b1 or y=k3*x+b3)
    coordsArray[1, 0] = Math.Round(((indexesArray[2, 1] - indexesArray[0, 1]) /
    (indexesArray[0, 0] - indexesArray[2, 0])), 5); // Calculate X of intersection 
    coordsArray[1, 1] = Math.Round((indexesArray[0, 0] * coordsArray[1, 0] +
    indexesArray[0, 1]), 5); // Calculate Y of intersection
-
-   // Проверка по Y
-   // double y2 = Math.Round((indexesArray[2, 0] * coordsArray[1, 0] +
-   // indexesArray[2, 1]), 5);
-   // Console.WriteLine(y2);
 
    // Intersection of lineB and lineC (x=(b3-b2)/(k2-k3); y=k2*x+b2 or y=k3*x+b3)
    coordsArray[2, 0] = Math.Round(((indexesArray[2, 1] - indexesArray[1, 1]) /
@@ -96,12 +86,22 @@ double[,] CountCoordsOfPoints(double[,] indexesArray) // Count coordinates of th
    coordsArray[2, 1] = Math.Round((indexesArray[1, 0] * coordsArray[2, 0] +
    indexesArray[1, 1]), 5); // Calculate Y of intersection
 
-   // Проверка по Y
+   // Проверка по Y первой точки пересечения
+   // double y1 = Math.Round((indexesArray[1, 0] * coordsArray[0, 0] +
+   // indexesArray[1, 1]), 5);
+   // Console.WriteLine(y1);
+
+   // Проверка по Y второй точки пересечения
+   // double y2 = Math.Round((indexesArray[2, 0] * coordsArray[1, 0] +
+   // indexesArray[2, 1]), 5);
+   // Console.WriteLine(y2);
+
+   // Проверка по Y третьей точки пересечения
    // double y3 = Math.Round((indexesArray[2, 0] * coordsArray[2, 0] +
    // indexesArray[2, 1]), 5);
    // Console.WriteLine(y3);
 
-   return coordsArray;
+   return coordsArray; // Returns coordinates
 }
 
 double TriangleAreaHeron(double[,] coordsArray) // Calculate triangle area with Heron method
