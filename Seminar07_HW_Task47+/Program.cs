@@ -46,7 +46,6 @@ void PrintTwoDimArray(double[,] twoDimArray) // Print two-dimentional array
       for (int j = 0; j < twoDimArray.GetLength(1); j++) // Columns
       {
          PrintColorizedRealNumber(twoDimArray[i, j]);
-         Console.Write("  ");
          // Console.Write("{0, 9}", twoDimArray[i, j]); // Print the next element
       }
       Console.WriteLine(); // Empty string to separate lines
@@ -64,7 +63,7 @@ void PrintColorizedRealNumber(double arrayElem) // Colorize one real number elem
       Console.Write(stringElem[i]); // Printing one colorized digit
       Console.ResetColor(); // Resets color to default color
    }
-   Console.Write(new string(' ', tabSize - stringElem.Length)); // Aligning the number in column
+   Console.Write(new string(' ', tabSize - stringElem.Length)); // Aligning the number in column by adding some spaces
 }
 
 int InputStringToInteger(string message) // Input string and convert it to integer
@@ -73,7 +72,5 @@ int InputStringToInteger(string message) // Input string and convert it to integ
    int integerNumber = int.Parse(Console.ReadLine() ?? ""); // Convert string to integer
    return integerNumber; // Return inputed number 
 }
-
-
 
 GenerateFloatTwoDimArray(); // Starts main method
