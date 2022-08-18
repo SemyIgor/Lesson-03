@@ -57,13 +57,14 @@ void PrintColorizedRealNumber(double arrayElem) // Colorize one real number elem
 {
    System.Random randomGenerator = new Random();
    string stringElem = Convert.ToString(arrayElem); // Converting real number to string
+   int tabSize = 9;
    for (int i = 0; i < stringElem.Length; i++) // Iterating digits of the string (digits of one element)
    {
       Console.ForegroundColor = col[randomGenerator.Next(0, 15)]; // Set color for printing the sum 
       Console.Write(stringElem[i]); // Printing one colorized digit
       Console.ResetColor(); // Resets color to default color
    }
-   Console.Write(new string(' ', 9 - stringElem.Length)); // Aligning the number in column
+   Console.Write(new string(' ', tabSize - stringElem.Length)); // Aligning the number in column
 }
 
 int InputStringToInteger(string message) // Input string and convert it to integer
