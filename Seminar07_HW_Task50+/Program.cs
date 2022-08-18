@@ -24,7 +24,7 @@ void FindElemByXYAdressInArray()
       int left = Console.CursorLeft; // Save the current left position
       int top = Console.CursorTop; // Save the current top position
       SetCursorPosition(0, 0); // Setting cursor to zero position to re-print the table with colorized chosen number
-      PrintTwoDimArrayCondition(intTwoDimArray, findValue); // Re-printing the table, colorizing the chosen number
+      PrintTwoDimArrayCondition(intTwoDimArray, findValue, left, top); // Re-printing the table, colorizing the chosen number
       SetCursorPosition(left, top); // Repositioning the cursor into saved position
    }
    catch
@@ -78,7 +78,7 @@ void PrintTwoDimArray(int[,] twoDimArray) // Print two-dimentional array
    Console.WriteLine(); // Empty string to separate table
 }
 
-void PrintTwoDimArrayCondition(int[,] twoDimArray, int findValue) // Print two-dimentional array
+void PrintTwoDimArrayCondition(int[,] twoDimArray, int findValue, int left, int top) // Print two-dimentional array
 {
    for (int i = 0; i < twoDimArray.GetLength(0); i++) // Rows
    {
@@ -95,6 +95,7 @@ void PrintTwoDimArrayCondition(int[,] twoDimArray, int findValue) // Print two-d
       }
       Console.WriteLine(); // Empty string to separate lines
    }
+   SetCursorPosition(left, top); // Repositioning the cursor into saved position
    Console.WriteLine("Чмсло не найдено");
 }
 
