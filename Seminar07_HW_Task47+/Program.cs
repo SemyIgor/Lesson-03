@@ -62,8 +62,8 @@ void PrintColorizedRealNumber(double arrayElem) // Colorize one real number elem
       Console.ForegroundColor = col[randomGenerator.Next(0, 15)]; // Set color for printing the sum 
       Console.Write(stringElem[i]); // Printing one colorized digit
       Console.ResetColor(); // Resets color to default color
-
    }
+   Console.Write(new string(' ', 9 - stringElem.Length)); // Aligning the number in column
 }
 
 int InputStringToInteger(string message) // Input string and convert it to integer
