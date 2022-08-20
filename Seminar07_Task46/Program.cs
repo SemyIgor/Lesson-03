@@ -4,27 +4,27 @@ void CreateTwoDimArray()
 {
    int rows = 7;
    int columns = 5;
-   int minRange = 0;
-   int maxRange = 100;
+   int minValue = 0;
+   int maxValue = 100;
 
    int[,] intTwoDimArray =
-   IntGenerateTwoDimArray(rows, columns, minRange, maxRange); // Generate two-dimentional array
+   IntGenerateTwoDimArray(rows, columns, minValue, maxValue); // Generate two-dimentional array
    PrintTwoDimArray(intTwoDimArray); // Print two-dimentional array
 
 }
 
 int[,] IntGenerateTwoDimArray(int row, int col, int min, int max) // Generate two-dimentional array
 {
-   System.Random randomSintezator = new Random();
+   System.Random randomSintezator = new Random(); // Initiates random number generator
    int[,] twoDimArray = new int[row, col];
    for (int i = 0; i < twoDimArray.GetLength(0); i++) // Rows
    {
       for (int j = 0; j < twoDimArray.GetLength(1); j++) // Columns
       {
-         twoDimArray[i, j] = randomSintezator.Next(min, max);
+         twoDimArray[i, j] = randomSintezator.Next(min, max); // Generates one random array item
       }
    }
-   return twoDimArray;
+   return twoDimArray; // returns two-dimantional array
 }
 
 void PrintTwoDimArray(int[,] twoDimArray) // Print two-dimentional array
@@ -33,28 +33,10 @@ void PrintTwoDimArray(int[,] twoDimArray) // Print two-dimentional array
    {
       for (int j = 0; j < twoDimArray.GetLength(1); j++) // Columns
       {
-         Console.Write("{0, 3}", twoDimArray[i, j]);
+         Console.Write("{0, 3}", twoDimArray[i, j]); // Print one next element
       }
       Console.WriteLine(); // Empty string to separate lines
    }
 }
-
-// Двумерный массив с рациональными (double) элементами сделать потом
-// void PrintArray(double[,] array) // Print given array
-// {
-//    for (int j = 0; j < array.GetLength(0); j++)
-//    {
-//       int i = 0;
-//       Console.Write($"["); // Print opening bracket
-//       while (i < array.GetLength(1) - 1) // Print elements and commas, but not last element
-//       {
-//          Console.Write("{0,4}, ", array[j, i]); // Print elements and commas using formatting
-//          i++;
-//       }
-//       Console.WriteLine("{0,4} ]\n", array[j, i]); // Print last element and closing bracket
-
-//    }
-// }
-
 
 CreateTwoDimArray();
