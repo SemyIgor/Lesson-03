@@ -1,6 +1,6 @@
 ﻿// Lesson-03_Seminar08_Task53. Exchange values of the first and the last rows
 
-void ChangeTwoDimArrayElements()
+void ExchangeTwoDimArrayElements()
 {
    int rows = 10;
    int columns = 14;
@@ -62,4 +62,4 @@ int[,] ChangeRowsTwoDimArray(int[,] twoDimArray)
    return twoDimArray;
 }
 
-ChangeTwoDimArrayElements();
+ExchangeTwoDimArrayElements();
