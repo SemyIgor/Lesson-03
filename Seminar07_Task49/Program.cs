@@ -54,35 +54,6 @@ int[,] ChangeElementsByRule(int[,] twoDimArray)
 ConsoleColor[] col = new ConsoleColor[]{ConsoleColor.Black,ConsoleColor.Blue, ConsoleColor.Cyan,
                ConsoleColor.DarkBlue, ConsoleColor.DarkCyan, ConsoleColor.DarkGray, ConsoleColor.DarkGreen, ConsoleColor.DarkMagenta, ConsoleColor.DarkRed, ConsoleColor.DarkYellow, ConsoleColor.Gray, ConsoleColor.Green, ConsoleColor.Magenta, ConsoleColor.Red, ConsoleColor.White, ConsoleColor.Yellow};
 
-void PrintTwoDimArray(int[,] twoDimArray) // Print two-dimentional array
-{
-   Console.ForegroundColor = ConsoleColor.Yellow; // Changes color of the text in console
-   for (int i = 0; i < twoDimArray.GetLength(0); i++) // Rows
-   {
-      for (int j = 0; j < twoDimArray.GetLength(1); j++) // Columns
-      {
-         Console.Write("{0, 5}", twoDimArray[i, j]);
-      }
-      Console.WriteLine(); // Empty string to separate lines
-   }
-}
-
-void ColorPrintTwoDimArray(int[,] twoDimArray) // Print two-dimentional array
-{
-   System.Random randomSintezator = new Random();
-   Console.ForegroundColor = ConsoleColor.Yellow; // Changes color of the text in console
-   for (int i = 0; i < twoDimArray.GetLength(0); i++) // Rows
-   {
-      for (int j = 0; j < twoDimArray.GetLength(1); j++) // Columns
-      {
-         Console.ForegroundColor = ConsoleColor.Red;
-         Console.Write("{0, 5}", twoDimArray[i, j]);
-         Console.ResetColor(); // Resets color to default color
-      }
-      Console.WriteLine(); // Empty string to separate lines
-   }
-}
-
 void ColorMarkArrayChanges(int[,] twoDimArray)
 {
    for (int i = 0; i < twoDimArray.GetLength(0); i++) // Rows
@@ -102,3 +73,34 @@ void ColorMarkArrayChanges(int[,] twoDimArray)
 }
 
 ChangeTwoDimArrayElements();
+
+
+
+// void ColorPrintTwoDimArray(int[,] twoDimArray) // Print two-dimentional array
+// {
+//    System.Random randomSintezator = new Random();
+//    Console.ForegroundColor = ConsoleColor.Yellow; // Changes color of the text in console
+//    for (int i = 0; i < twoDimArray.GetLength(0); i++) // Rows
+//    {
+//       for (int j = 0; j < twoDimArray.GetLength(1); j++) // Columns
+//       {
+//          Console.ForegroundColor = ConsoleColor.Red;
+//          Console.Write("{0, 5}", twoDimArray[i, j]);
+//          Console.ResetColor(); // Resets color to default color
+//       }
+//       Console.WriteLine(); // Empty string to separate lines
+//    }
+// }
+
+// void PrintTwoDimArray(int[,] twoDimArray) // Print two-dimentional array
+// {
+//    Console.ForegroundColor = ConsoleColor.Yellow; // Changes color of the text in console
+//    for (int i = 0; i < twoDimArray.GetLength(0); i++) // Rows
+//    {
+//       for (int j = 0; j < twoDimArray.GetLength(1); j++) // Columns
+//       {
+//          Console.Write("{0, 5}", twoDimArray[i, j]);
+//       }
+//       Console.WriteLine(); // Empty string to separate lines
+//    }
+// }
