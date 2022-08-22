@@ -99,7 +99,7 @@ int[] BubbleSort(int[] array) // Sorts given array with bubble sort method
    return arraySorted;
 }
 
-int[] SelectionSort(int[] array) // Sorts given array with counting sort method
+int[] SelectionSort(int[] array) // Sorts given array with selection sort method
 {
    int[] sortedArray = new int[array.Length];
    array.CopyTo(sortedArray, 0); // Copy of the initial array
