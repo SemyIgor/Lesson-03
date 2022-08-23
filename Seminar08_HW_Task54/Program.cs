@@ -46,7 +46,7 @@ void PrintTwoDimArray(int[,] twoDimArray) // Print two-dimentional array
    }
 }
 
-int[,] SortRowsTwoDimArray(int[,] twoDimArray)
+int[,] SortRowsTwoDimArray(int[,] twoDimArray) // Descending sorting rows of the initial array
 {
    int columns = twoDimArray.GetLength(1);
    int rows = twoDimArray.GetLength(0);
