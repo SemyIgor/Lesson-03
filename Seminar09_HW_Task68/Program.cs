@@ -9,7 +9,7 @@ void AccermansFunc()
    string enterN = InputString("Введите число n = ");
    uint n = uint.Parse(enterN);
 
-   Console.WriteLine(Accerman(m, n));
+   Console.WriteLine("Функция Аккермана равна {0}", Accerman(m, n));
 
 }
 
