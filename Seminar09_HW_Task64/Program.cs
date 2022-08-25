@@ -1,7 +1,8 @@
-﻿// Lesson-03_Seminar09_Task64. Print all positive integers in the range of M to N
-// Вывести все натуральные числа в диапазоне от M до N. 
+﻿// Lesson-03_Seminar09_Task64. 
+// Print all positive integers in the range of M to N in descending order
+// Вывести все натуральные числа в диапазоне от M до N в убывающем порядке. 
 
-void PrintIntegersOfRange() // Gets two positive integer numbers and prints them from min to max
+void PrintIntegersOfRange() // Gets two positive integer numbers and prints them from max to min
 {
    Console.Clear();
 
@@ -14,7 +15,7 @@ void PrintIntegersOfRange() // Gets two positive integer numbers and prints them
       TakeNumbers(arrayItemRangeStr, "-", out minValue, out maxValue); // Extract from the string "min-max" two numbers and defines the min and the max of them
 
       Console.WriteLine("min = {0}; max = {1}", minValue, maxValue); // Prints min and max numbers
-      RecursPrintMN(minValue, maxValue + 1);
+      RecursPrintMN(minValue - 1, maxValue);
    }
    catch
    {
@@ -32,8 +33,8 @@ string InputString(string message) // Invitation to and input of a string
 // Takes two numbers from the string and defines the min and the max of them
 void TakeNumbers(string strLine, string mathOp, out int numFirst, out int numSecond)
 {
-   numFirst = int.Parse(strLine.Substring(0, strLine.IndexOf(mathOp))); // Takes the first number of the math problem
-   numSecond = int.Parse(strLine.Substring(strLine.IndexOf(mathOp) + 1)); // Takes the second number of the math problem
+   numFirst = int.Parse(strLine.Substring(0, strLine.IndexOf(mathOp))); // Takes the first number of the input string
+   numSecond = int.Parse(strLine.Substring(strLine.IndexOf(mathOp) + 1)); // Takes the second number of the nput string
 
    // Changes num values of each other to set the min number as numFirst and max number as numSecond
    int temp;
@@ -45,7 +46,8 @@ void TakeNumbers(string strLine, string mathOp, out int numFirst, out int numSec
    }
 }
 
-int RecursPrintMN(int M, int N) // Prints positive integers from M to N, using recursion
+// Prints positive integers from M to N in descending order, using recursion
+int RecursPrintMN(int M, int N)
 {
    int winWidth = Console.WindowWidth; // Gets the width of the console
    int tabSize = 4; // Tabulation field size
@@ -58,8 +60,8 @@ int RecursPrintMN(int M, int N) // Prints positive integers from M to N, using r
 
    // The end of plunging if all the numbers in the range min-max were iterated
    if (M == N) return M;
-   else Console.Write(formatItem, RecursPrintMN(M, N - 1)); // Recursion happens
-   return N; // Returns the number value
+   else Console.Write(formatItem, RecursPrintMN(M + 1, N)); // Recursion happens
+   return M; // Returns the number value
 }
 
 PrintIntegersOfRange(); // Main method starts here
