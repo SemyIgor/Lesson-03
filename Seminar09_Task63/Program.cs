@@ -40,7 +40,7 @@ int PrintNumbersRecurs(int number) // Prints positive integers from 1 to "number
    if (number == 1) return 1; // The end of plunging
    else Console.Write(formatItem, PrintNumbersRecurs(number - 1)); // Recursion happens
 
-   return number; // Never is being achieved
+   return number; // Returns the number value
 }
 
 PrintIntegerOfRange();
