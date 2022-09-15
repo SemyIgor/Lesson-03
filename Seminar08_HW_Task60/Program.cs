@@ -1,4 +1,4 @@
-﻿// Lesson-03_Seminar08_Task60. Generate 3-d array of non-repeating two-digit items
+﻿// Lesson-03_Seminar08_HW_Task60. Generate 3-d array of non-repeating two-digit items
 // and print it out with their indexes
 // 
 // Сформируйте трёхмерный массив из неповторяющихся двухзначных чисел.
