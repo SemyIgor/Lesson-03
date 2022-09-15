@@ -1,4 +1,4 @@
-﻿// Lesson-03_Seminar08_Task54. Descending sort of every row of the two-dim array
+﻿// Lesson-03_Seminar08_HW_Task54. Descending sort of every row of the two-dim array
 // 
 void SortRowsOfArray()
 {
