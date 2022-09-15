@@ -1,4 +1,4 @@
-﻿// Create two-dim array [m,n], each element is m+n.
+﻿// Seminar07_Task48. Create two-dim array [m,n], each element is m+n.
 // * Colorise elements
 void ColorTwoDimArray()
 {
