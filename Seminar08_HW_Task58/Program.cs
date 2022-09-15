@@ -1,4 +1,4 @@
-﻿// Lesson-03_Seminar08_Task58. Multiply two matrix.
+﻿// Lesson-03_Seminar08_HW_Task58. Multiply two matrix.
 
 void MulTwoMatrix()
 {
