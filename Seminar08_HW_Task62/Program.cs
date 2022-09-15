@@ -1,4 +1,4 @@
-﻿// Lesson-03_Seminar08_Task62. Fill spiral array
+﻿// Lesson-03_Seminar08_HW_Task62. Fill spiral array
 
 void FillSpiral()
 {
