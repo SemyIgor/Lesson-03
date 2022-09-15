@@ -1,4 +1,4 @@
-﻿// Lesson-03_Seminar08_Task56. Generate array, find the row with the minimum sum of array's items 
+﻿// Lesson-03_Seminar08_HW_Task56. Generate array, find the row with the minimum sum of array's items 
 
 void FindRowWithMinSum()
 {
@@ -13,7 +13,7 @@ void FindRowWithMinSum()
    PrintTwoDimArray(initArray); // Prints unsorted initial array
 
    int minSumRowIndex = FindMinSumIndex(initArray, maxValue); // Finds the index of the row with the minimum sum of items
-   Console.WriteLine("   Минимальная сумма в строке № {0}", minSumRowIndex);
+   Console.WriteLine("   Минимальная сумма найдена в строке № {0}", minSumRowIndex);
 }
 
 int[,] IntGenerateTwoDimArray(int row, int col, int min, int max) // Generate two-dimentional array
@@ -67,13 +67,14 @@ int FindMinSumIndex(int[,] twoDimArray, int maxValue) // Finds minimum sum of th
    {
       sum = CalcSumOfRow(twoDimArray, i); // Calculates the sum of the elements in the i-row
 
-      // Finds maximum sum of the row and the number of this row
+      // Finds minimum sum of the row and the number of this row
       if (sum < minSum)
       {
          minSum = sum;
          indexRowMinSum = i;
       }
    }
+   Console.WriteLine("   Минимальная сумма найденной строки равна {0}", minSum);
    return indexRowMinSum; // Returns the index of the found row
 }
 
