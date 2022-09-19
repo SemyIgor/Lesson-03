@@ -19,3 +19,5 @@
    - Convert this number into array of 1-digit integer numbers by cutting last digit of the number in cycle.
    - Compare 1st <=> 5th and 2nd <=> 4th elements of the array (5th element does not matter!). If the equality is true - entered number is a palyndrome.
 2. Variant II `(By generating dictionary of the 4-digit palyndromes)`:
+
+# Create Repo Lesson-02
